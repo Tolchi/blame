@@ -11,8 +11,6 @@ gem 'sqlite3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-	gem 'bootstrap-sass', '~> 2.3.0.1'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -22,8 +20,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-gem 'bootstrap-sass', '~> 2.3.0.1', :group => [ :test, :development ]
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,3 +35,17 @@ gem 'bootstrap-sass', '~> 2.3.0.1', :group => [ :test, :development ]
 
 # To use debugger
 # gem 'debugger'
+
+group :test, :development do
+	gem 'rspec-rails'
+	gem 'sass-rails',   '~> 3.2.3'
+	gem 'bootstrap-sass', '~> 2.3.0.1'
+end
+
+group :test do
+	gem 'factory_girl_rails'
+	gem 'guard-rspec'
+	gem 'capybara'
+	gem 'rb-fsevent', '~> 0.9'
+end
+
