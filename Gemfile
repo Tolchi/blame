@@ -45,7 +45,7 @@ end
 group :test do
 	gem 'factory_girl_rails'
 	gem 'guard-rspec'
-	gem 'capybara'
+	gem 'capybara_rails'
 
 	# Guard-rspec dependencies 
 	# on linux 

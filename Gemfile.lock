@@ -32,13 +32,20 @@ GEM
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
     builder (3.0.4)
-    capybara (2.0.2)
+    capybara (1.1.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
-      xpath (~> 1.0.0)
+      xpath (~> 0.1.4)
+    capybara-firebug (1.1.0)
+      capybara (~> 1.0)
+    capybara_rails (0.0.3)
+      capybara (~> 1.1.2)
+      capybara-firebug (~> 1.1.0)
+      database_cleaner (~> 0.7.1)
+      rails (~> 3.2.1)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.0.9)
@@ -50,6 +57,7 @@ GEM
       execjs
     coffee-script-source (1.6.1)
     columnize (0.3.6)
+    database_cleaner (0.7.2)
     debugger (1.3.3)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
@@ -169,7 +177,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     websocket (1.0.7)
-    xpath (1.0.0)
+    xpath (0.1.4)
       nokogiri (~> 1.3)
 
 PLATFORMS
@@ -177,7 +185,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 2.3.0.1)
-  capybara
+  capybara_rails
   coffee-rails (~> 3.2.1)
   debugger
   factory_girl_rails
