@@ -34,12 +34,12 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
 
 group :test, :development do
 	gem 'rspec-rails'
 	gem 'sass-rails',   '~> 3.2.3'
 	gem 'bootstrap-sass', '~> 2.3.0.1'
+	gem 'debugger'
 end
 
 group :test do

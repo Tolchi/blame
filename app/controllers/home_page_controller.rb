@@ -1,5 +1,5 @@
 class HomePageController < ApplicationController
-	def visit
+	def main 
 		
 	end
 end
