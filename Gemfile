@@ -46,6 +46,12 @@ group :test do
 	gem 'factory_girl_rails'
 	gem 'guard-rspec'
 	gem 'capybara'
-	gem 'rb-fsevent', '~> 0.9'
+
+	# Guard-rspec dependencies 
+	# on linux 
+	gem 'rb-inotify' if RUBY_PLATFORM.include?("i686-linux")
+	#
+	# on mac
+	gem 'rb-fsevent' if RUBY_PLATFORM.include?("x86_64-darwin")
 end
 
