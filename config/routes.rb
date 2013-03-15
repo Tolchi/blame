@@ -1,4 +1,6 @@
 Blame::Application.routes.draw do
+  match '/login' => 'user#login_page'
+
 	root :to => "home_page#main"
 
   # The priority is based upon order of creation:
