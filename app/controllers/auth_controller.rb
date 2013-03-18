@@ -1,4 +1,8 @@
 class AuthController < ApplicationController
-  def logon
+  def login_page
+  end
+
+
+  def logins
   end
 end

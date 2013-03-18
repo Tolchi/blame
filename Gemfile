@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 
+gem 'sass-rails',   '~> 3.2.3'
+gem 'bootstrap-sass', '~> 2.3.0.1'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -37,8 +40,6 @@ gem 'jquery-rails'
 
 group :test, :development do
 	gem 'rspec-rails'
-	gem 'sass-rails',   '~> 3.2.3'
-	gem 'bootstrap-sass', '~> 2.3.0.1'
 	gem 'debugger'
 end
 
