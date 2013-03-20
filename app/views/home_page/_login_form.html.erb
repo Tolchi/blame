@@ -1,0 +1,15 @@
+password stat: <%= @notice %><br>
+session_info: <%= @session_info %><br>
+login_info: <%= @login_info %><br>
+you: <%= @login_info %><br>
+<div class="navbar-form pull-right" style="<%= @session_info %>">
+	Hi! <%= @you %>
+</div>
+<div class="navbar-form pull-right" style="<%= @loggin_info %> ">
+	<%= form_tag '/logins', :method => 'post', :class => 'navbar-form pull-right' do %>
+		<%= text_field_tag 'email', nil, :placeholder => "Email", :class => "span2"  %>
+		<%= text_field_tag 'pass', nil, :type => 'password', :placeholder => "Password", 
+			:class => "span2" %>
+		<%= submit_tag 'Sign in', :class => 'btn' %>
+	<% end %>
+</div>
