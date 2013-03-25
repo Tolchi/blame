@@ -6,7 +6,7 @@ describe "AuthLogins" do
 
     page.fill_in( 'email', :with => 'diego.sanches@gmail.com' )
     page.fill_in( 'pass', :with => '12345' )
-    click_button( 'Sign in' )
+    click_button( 'LogIn' )
 
     page.should have_content('diego.sanches@gmail.com')
   end

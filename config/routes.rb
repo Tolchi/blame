@@ -1,5 +1,5 @@
 Blame::Application.routes.draw do
-  match '/logins' => 'auth#logins'
+  match '/logins' => 'home_page#logins'
 
 	root :to => "home_page#main"
 
