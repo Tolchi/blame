@@ -3,8 +3,8 @@ require 'users_factory'
 
 describe "UserRequests", test: :request do
   before(:each) do
-    @me = UsersFactory.new( :email => 'diego.sanches@gmail.com', \
-                           :pass => '12345' )
+    @me = UsersFactory.new( :email => 'diego.sanches@gmail.com', :pass => '12345' )
+    @me.save
   end
 
   after(:each) do
