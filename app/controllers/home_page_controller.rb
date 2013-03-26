@@ -6,8 +6,7 @@ class HomePageController < ApplicationController
 
     if @user 
       @you = @user.email
-      @loggin_info = 'display: none'
-      @session_info = ''
+      @loggin_class = 'hidden'
     end
 
   end

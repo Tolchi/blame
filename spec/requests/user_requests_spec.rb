@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'users_factory'
 
 describe "UserRequests", test: :request do
   before(:each) do
@@ -28,6 +27,7 @@ describe "UserRequests", test: :request do
 
   describe "Logging" do
     it "should let user completes it's mail pastword" do
+      
       visit( root_path )
 
       page.fill_in( 'email', :with => @me.email )
