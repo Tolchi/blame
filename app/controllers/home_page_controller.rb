@@ -4,8 +4,6 @@ class HomePageController < ApplicationController
   def main 
     @user = UsersFactory.find( session[:id] ) if session[:id]
 
-    debugger
-
     if @user 
       @you = @user.email
       @loggin_info = 'display: none'
@@ -15,10 +13,11 @@ class HomePageController < ApplicationController
   end
 
   def logins
-    @user = UsersFactory.where( "email = ?", params[:email] )
+    users = UsersFactory.where( :email => params[:email] )
 
-    if Auth::Authentifier.isValid?( @user, params[:pass] ) 
-      session[:id] = @user.id
+    if not users.empty? and \
+      Auth::Authentifier.isValid?( users.first, params[:pass] ) 
+      session[:id] = users.first.id
     end
 
     redirect_to root_path

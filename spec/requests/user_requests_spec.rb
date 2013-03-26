@@ -3,12 +3,20 @@ require 'users_factory'
 
 describe "UserRequests", test: :request do
   before(:each) do
-    @me = UsersFactory.new( :email => 'diego.sanches@gmail.com', :pass => '12345' )
-    @me.save
+    users = UsersFactory.where( 'email = ?', \
+      'diego.sanches@gmail.com' )
+
+    if not users.empty?
+      @me = users.first
+    else
+      @me = UsersFactory.new( :email => 'diego.sanches@gmail.com', \
+        :pass => '12345' )
+      @me.save
+    end
+
   end
 
   after(:each) do
-    @me.delete
   end 
 
   describe "Visiting home page" do
