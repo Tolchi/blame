@@ -2,17 +2,21 @@ require 'authentifier.rb'
 
 class HomePageController < ApplicationController
   def main 
-      puts "main", @you, @loggin_info, @session_info
+    @user = UsersFactory.find( session[:id] ) if session[:id]
+
+    if @user 
+      @you = @user.email
+      @loggin_info = 'display: none'
+      @session_info = ''
+    end
+
   end
 
   def logins
-    if Auth::Authentifier.isValid?( params[:email], params[:pass] ) 
-      puts "logins", "User/Password is valid"
-      @you = params[:email]
-      @loggin_info = 'display: none'
-      @session_info = ''
+    @user = UsersFactory.find( params[:email] )
 
-      puts "logins", @you, @loggin_info, @session_info
+    if Auth::Authentifier.isValid?( @user, params[:pass] ) 
+      session[:id] = @user.id
     end
 
     redirect_to root_path
