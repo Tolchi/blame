@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @users_factory.email %>
+</p>
+
+<p>
+  <b>Pass:</b>
+  <%= @users_factory.pass %>
+</p>
+
+
+<%= link_to 'Edit', edit_users_factory_path(@users_factory) %> |
+<%= link_to 'Back', users_factories_path %>

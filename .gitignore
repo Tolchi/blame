@@ -33,3 +33,6 @@ pickle-email-*.html
 # Vim file
 *.sw?
 *~
+
+# Others
+Gemfile.lock

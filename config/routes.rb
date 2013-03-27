@@ -1,4 +1,10 @@
 Blame::Application.routes.draw do
+<<<<<<< HEAD
+=======
+  resources :users_factories
+
+
+>>>>>>> f5367270584f424bcfe1eef0b29ecf98e6744b24
   match '/logins' => 'home_page#logins'
 
 	root :to => "home_page#main"
