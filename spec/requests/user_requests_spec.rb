@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "UserRequests", test: :request do
+	# Before each spec
   before(:each) do
     users = UsersFactory.where( 'email = ?', \
       'diego.sanches@gmail.com' )
@@ -14,9 +15,6 @@ describe "UserRequests", test: :request do
     end
 
   end
-
-  after(:each) do
-  end 
 
   describe "Visiting home page" do
     it "must show home page" do
