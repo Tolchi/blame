@@ -8,6 +8,6 @@ describe "AuthLogins" do
     page.fill_in( 'pass', :with => '12345' )
     click_button( 'Sign in' )
 
-    page.should have_content('diego.sanches@gmail.com')
+    page.should have_content('Hi! diego.sanches@gmail.com')
   end
 end
