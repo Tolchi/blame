@@ -18,7 +18,7 @@ describe HomePageController do
 
   describe "Not user logged in" do
     it "should return logging form visible" do
-			pending 
+      pending "add XPath query"
     end
   end
 

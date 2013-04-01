@@ -50,10 +50,11 @@ group :test do
 
 	# Guard-rspec dependencies 
 	# on linux 
-	gem 'rb-inotify' if RUBY_PLATFORM.include?("i686-linux")
+	#gem 'rb-inotify' if RUBY_PLATFORM.include?("i686-linux")
 	#
 	# on mac
-	gem 'rb-fsevent' if RUBY_PLATFORM.include?("x86_64-darwin")
+	#gem 'rb-fsevent' if RUBY_PLATFORM.include?("x86_64-darwin")
+	gem 'rb-fsevent'
 end
 
 gem 'haml', '>= 4.0.0'
