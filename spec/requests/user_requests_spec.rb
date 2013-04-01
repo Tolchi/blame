@@ -24,7 +24,7 @@ describe "UserRequests", test: :request do
   end
 
   describe "Logging" do
-    it "should let user completes it's mail pastword" do
+    it "should let user completes the mail password" do
       
       visit( root_path )
 
