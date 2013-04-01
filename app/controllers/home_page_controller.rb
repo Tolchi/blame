@@ -4,8 +4,6 @@ class HomePageController < ApplicationController
   def main 
     @user = UsersFactory.find( session[:id] ) if session[:id]
 
-		puts @user.inspect()
-
     if @user 
       @you = @user.email
       @loggin_class = 'hidden'

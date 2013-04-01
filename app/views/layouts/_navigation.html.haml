@@ -31,5 +31,9 @@
                 %a{:href => "#"} Separated link
               %li
                 %a{:href => "#"} One more separated link
-        = render 'layouts/login_form'
+        - if @user.nil?
+          = render 'layouts/login_form'
+        - else
+          = render 'layouts/session'
+
       / /.nav-collapse

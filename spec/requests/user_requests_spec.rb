@@ -25,14 +25,13 @@ describe "UserRequests", test: :request do
 
   describe "Logging" do
     it "should let user completes the mail password" do
-      
       visit( root_path )
-
+		
       page.fill_in( 'email', :with => @me.email )
       page.fill_in( 'pass', :with => @me.pass )
       click_button( 'LogIn' )
 
-      page.should have_content(@me.email)
+      page.should have_content( 'Hi! ' + @me.email )
     end
   end
 end
