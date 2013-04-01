@@ -1,0 +1,18 @@
+%h1 Listing users_factories
+%table
+  %tr
+    %th Email
+    %th Pass
+    %th
+    %th
+    %th
+  - @users_factories.each do |users_factory|
+    %tr
+      %td= users_factory.email
+      %td= users_factory.pass
+      %td= link_to 'Show', users_factory
+      %td= link_to 'Edit', edit_users_factory_path(users_factory)
+      %td= link_to 'Destroy', users_factory, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Users factory', new_users_factory_path
+

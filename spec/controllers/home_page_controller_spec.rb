@@ -18,14 +18,15 @@ describe HomePageController do
 
   describe "Not user logged in" do
     it "should return logging form visible" do
-      visit root_path
-      page.should has_css?('div hidden')
+			pending 
     end
   end
 
   describe "Once user's logged in" do
     it "should return logging form hidden" do
       visit root_path
+
+			puts page
 
       page.fill_in( 'email', :with => @me.email )
       page.fill_in( 'pass', :with => @me.pass )

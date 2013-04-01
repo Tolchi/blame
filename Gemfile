@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 gem 'sass-rails',   '~> 3.2.3'
 gem 'bootstrap-sass', '~> 2.3.0.1'
@@ -56,3 +56,5 @@ group :test do
 	gem 'rb-fsevent' if RUBY_PLATFORM.include?("x86_64-darwin")
 end
 
+gem 'haml', '>= 4.0.0'
+gem 'haml-rails', '>= 0.4.0'
