@@ -6,7 +6,8 @@ class HomePageController < ApplicationController
 
     if @user 
       @you = @user.email
-      @loggin_class = 'hidden'
+		else
+			@login_failed = true
     end
 
   end
@@ -14,7 +15,7 @@ class HomePageController < ApplicationController
   def logins
     users = UsersFactory.where( :email => params[:email] )
 
-    if not users.empty? and \
+    if not users.empty? and 
       Auth::Authentifier.isValid?( users.first, params[:pass] ) 
       session[:id] = users.first.id
     end

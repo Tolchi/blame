@@ -3,7 +3,7 @@ class Authentifier
   class << self
 
     def isValid?( aUser, itsPass )
-      return ( aUser.pass == '12345' )
+      return ( aUser.pass == itsPass )
     end
 
   end # Class' methods

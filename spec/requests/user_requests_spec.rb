@@ -20,4 +20,18 @@ describe "UserRequests", test: :request do
       page.should have_content( 'Hi! ' + user.email )
     end
   end
+
+  describe "Logging Failed" do
+    it "should not let user gets logged in" do
+      user = FactoryGirl.create(:users_factory)
+      visit( root_path )
+		
+      page.fill_in( 'email', :with => '<wrong_user>' )
+      page.fill_in( 'pass', :with => '<wrong_pass>' )
+      click_button( 'LogIn' )
+
+			page.should have_selector( 'div.warning')
+      page.should_not have_content( 'Hi! ' + user.email )
+    end
+  end
 end

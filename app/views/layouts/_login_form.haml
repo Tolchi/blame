@@ -1,4 +1,8 @@
-%div{:class => "navbar-form pull-right #{@loggin_class}"}
+%div{:class => "navbar-form pull-right "}
+  - if @login_failed
+    %div{:class => "warning"}
+      =image_tag("warning.png")
+
   = form_tag '/logins', :method => 'post', :class => 'navbar-form pull-right' do
     = text_field_tag 'email', nil, :placeholder => "Email", :class => "span2"
     = text_field_tag 'pass', nil, :type => 'password', :placeholder => "Password", |
