@@ -1,21 +1,6 @@
 require 'spec_helper'
 
 describe "UserRequests", test: :request do
-	# Before each spec
-  before(:each) do
-    users = UsersFactory.where( 'email = ?', \
-      'diego.sanches@gmail.com' )
-
-    if not users.empty?
-      @me = users.first
-    else
-      @me = UsersFactory.new( :email => 'diego.sanches@gmail.com', \
-        :pass => '12345' )
-      @me.save
-    end
-
-  end
-
   describe "Visiting home page" do
     it "must show home page" do
 			visit root_path
@@ -25,13 +10,14 @@ describe "UserRequests", test: :request do
 
   describe "Logging" do
     it "should let user completes the mail password" do
+      user = FactoryGirl.create(:users_factory)
       visit( root_path )
 		
-      page.fill_in( 'email', :with => @me.email )
-      page.fill_in( 'pass', :with => @me.pass )
+      page.fill_in( 'email', :with => user.email )
+      page.fill_in( 'pass', :with => user.pass )
       click_button( 'LogIn' )
 
-      page.should have_content( 'Hi! ' + @me.email )
+      page.should have_content( 'Hi! ' + user.email )
     end
   end
 end
