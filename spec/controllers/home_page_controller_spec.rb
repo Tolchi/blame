@@ -26,8 +26,6 @@ describe HomePageController do
     it "should return logging form hidden" do
       visit root_path
 
-			puts page
-
       page.fill_in( 'email', :with => @me.email )
       page.fill_in( 'pass', :with => @me.pass )
       click_button( 'LogIn' )

@@ -8,9 +8,6 @@ gem 'bootstrap-sass', '~> 2.3.0.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -41,6 +38,7 @@ gem 'jquery-rails'
 group :test, :development do
 	gem 'rspec-rails'
 	gem 'debugger'
+	gem 'sqlite3'
 end
 
 group :test do
@@ -50,12 +48,12 @@ group :test do
 
 	# Guard-rspec dependencies 
 	# on linux 
-	#gem 'rb-inotify' if RUBY_PLATFORM.include?("i686-linux")
+	gem 'rb-inotify' if RUBY_PLATFORM.include?("i686-linux")
 	#
 	# on mac
-	#gem 'rb-fsevent' if RUBY_PLATFORM.include?("x86_64-darwin")
-	gem 'rb-fsevent'
+	gem 'rb-fsevent' if RUBY_PLATFORM.include?("x86_64-darwin")
 end
 
 gem 'haml', '>= 4.0.0'
 gem 'haml-rails', '>= 0.4.0'
+
