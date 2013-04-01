@@ -1,5 +1,3 @@
-%div{:class => "navbar-form pull-right #{@session_class}"}
-  Hi! #{@you}
 %div{:class => "navbar-form pull-right #{@loggin_class}"}
   = form_tag '/logins', :method => 'post', :class => 'navbar-form pull-right' do
     = text_field_tag 'email', nil, :placeholder => "Email", :class => "span2"
