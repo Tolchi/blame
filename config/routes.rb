@@ -1,9 +1,6 @@
 Blame::Application.routes.draw do
   resources :users
-
-
-  resources :users
-	resources :session
+	resources :sessions
 
 	root :to => "home_page#main"
 
