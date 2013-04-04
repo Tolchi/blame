@@ -33,6 +33,8 @@ pickle-email-*.html
 # Vim file
 *.sw?
 *~
+#heroku push
+push*dat
 
 # Others
 Gemfile.lock
