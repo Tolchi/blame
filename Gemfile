@@ -57,3 +57,6 @@ end
 gem 'haml', '>= 4.0.0'
 gem 'haml-rails', '>= 0.4.0'
 
+group :production do 
+  gem 'pg'
+end
