@@ -39,6 +39,7 @@ group :test, :development do
 	gem 'rspec-rails'
 	gem 'debugger'
 	gem 'sqlite3'
+  gem 'annotate', ">=2.5.0"
 end
 
 group :test do

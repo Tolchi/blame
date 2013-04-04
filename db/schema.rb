@@ -20,4 +20,11 @@ ActiveRecord::Schema.define(:version => 20130402221557) do
     t.datetime "updated_at",      :null => false
   end
 
+  create_table "users_factories", :force => true do |t|
+    t.string   "email"
+    t.string   "pass"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
 end
