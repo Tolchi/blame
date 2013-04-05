@@ -6,7 +6,7 @@ describe "UserRequests", test: :request do
 			visit root_path
 			page.should have_content( 'Blame' )
 			page.should have_link('Sign Up')
-			page.should have_link('Log in')
+			page.should have_link('Log In')
     end
   end
 
